@@ -29,12 +29,16 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({ onStart }) => {
       {/* Hero Centerpiece: Bespoke Title Lockup */}
       <div className="flex flex-col items-center text-center max-w-2xl mx-auto space-y-4 my-auto">
         {/* Inline SVG Title Lockup */}
-        <div className="relative">
-          <svg className="w-72 sm:w-96 h-24 sm:h-28 mx-auto filter drop-shadow-[0_10px_20px_rgba(2,132,199,0.35)]" viewBox="0 0 400 120" fill="none">
+        <div className="relative w-full max-w-md mx-auto">
+          <svg
+            className="w-full h-auto mx-auto filter drop-shadow-[0_10px_25px_rgba(2,132,199,0.35)] overflow-visible"
+            viewBox="0 0 520 120"
+            fill="none"
+          >
             <defs>
               <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#38bdf8" />
-                <stop offset="50%" stopColor="#34d399" />
+                <stop offset="45%" stopColor="#34d399" />
                 <stop offset="100%" stopColor="#fbbf24" />
               </linearGradient>
               <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -45,34 +49,43 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({ onStart }) => {
 
             {/* Cloud accent */}
             <path
-              d="M60 40 C60 25, 80 20, 95 30 C105 18, 130 18, 140 32 C155 30, 165 42, 160 55 C160 65, 145 70, 60 70 Z"
+              d="M130 42 C130 25, 155 20, 175 32 C188 18, 225 18, 240 34 C258 24, 285 26, 295 44 C315 42, 330 54, 325 70 C325 80, 305 84, 130 84 Z"
               fill="url(#cloudGrad)"
-              opacity="0.3"
+              opacity="0.25"
             />
 
-            {/* Main Title Typography */}
+            {/* Main Title Typography - Generous horizontal padding so S and M never clip */}
             <text
-              x="200"
+              x="260"
               y="58"
               textAnchor="middle"
-              fontFamily="Fredoka, sans-serif"
+              fontFamily="'Fredoka', 'Plus Jakarta Sans', sans-serif"
               fontWeight="700"
-              fontSize="44"
+              fontSize="42"
               fill="url(#titleGrad)"
-              letterSpacing="1"
+              letterSpacing="1.5"
             >
               STREET TO STREAM
             </text>
 
             {/* Subtitle Ribbon */}
-            <rect x="70" y="76" width="260" height="26" rx="6" fill="#0f172a" stroke="#0ea5e9" strokeWidth="1.5" />
+            <rect
+              x="135"
+              y="76"
+              width="250"
+              height="26"
+              rx="6"
+              fill="#0f172a"
+              stroke="#0ea5e9"
+              strokeWidth="1.5"
+            />
             <text
-              x="200"
+              x="260"
               y="94"
               textAnchor="middle"
-              fontFamily="Plus Jakarta Sans, sans-serif"
+              fontFamily="'Plus Jakarta Sans', sans-serif"
               fontWeight="800"
-              fontSize="13"
+              fontSize="12.5"
               fill="#f8fafc"
               letterSpacing="3"
             >
@@ -81,7 +94,7 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({ onStart }) => {
           </svg>
 
           {/* Sparkle badge */}
-          <div className="absolute -top-3 -right-2 flex items-center gap-1 bg-amber-500/20 border border-amber-500/40 text-amber-300 px-2.5 py-0.5 rounded-full text-[11px] font-bold">
+          <div className="absolute -top-3 right-1 sm:right-4 flex items-center gap-1 bg-amber-500/20 border border-amber-500/40 text-amber-300 px-2.5 py-0.5 rounded-full text-[11px] font-bold shadow-lg">
             <Sparkles className="w-3 h-3" />
             <span>2D Adventure</span>
           </div>
