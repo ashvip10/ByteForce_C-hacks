@@ -1,0 +1,6 @@
+{
+  "name": "Street to Stream: Before the Rain",
+  "description": "An indie 2D adventure game where schoolboy hero Aarav races against the approaching monsoon to clean streets, sort waste, unblock drains, and befriend the neighborhood street dog.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
